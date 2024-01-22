@@ -1,0 +1,26 @@
+package com.hexaware.datetime;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class DateTime {
+
+	public static void main(String[] args) {
+		LocalDate date1 = LocalDate.now();
+		System.out.println(date1);
+		
+		LocalDate date2 = LocalDate.of(1947, 8, 15);
+		System.out.println(date2);
+		
+		String str = "1950-01-26";
+		LocalDate date3 = LocalDate.parse(str);
+		System.out.println(date3);
+		
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+		String str1 = "01-05-1960";
+		
+		LocalDate date4 = LocalDate.parse(str1,formatter);
+		System.out.println(date4);
+	}
+
+}
