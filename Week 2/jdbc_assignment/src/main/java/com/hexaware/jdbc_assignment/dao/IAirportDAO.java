@@ -11,6 +11,6 @@ public interface IAirportDAO {
 	public boolean addAirport(Airport airport);
 	public boolean updateAirport(Airport airport);
 	public boolean deleteAirport(String airportCode);
-	public Airport selectAirportByCode(String airportCode);
+	public List<Airport> selectAirportByLocation(String location);
 	public List<Airport> selectAllAirport();
 }

@@ -44,10 +44,10 @@ public class AirportDAOImpl implements IAirportDAO {
 	}
 
 	@Override
-	public Airport selectAirportByCode(String airportCode) {
-		String selectOne = "select iatacode, airportName, location from airports where iatacode = ?";
-		Airport airport = jdbcTemplate.queryForObject(selectOne, new AirportMapper(), airportCode);
-		return airport;
+	public List<Airport> selectAirportByLocation(String location) {
+		String selectOne = "select iatacode, airportName, location from airports where location = ?";
+		List<Airport> list = (List<Airport>) jdbcTemplate.query(selectOne, new AirportMapper(), location);
+		return list;
 	}
 
 	@Override

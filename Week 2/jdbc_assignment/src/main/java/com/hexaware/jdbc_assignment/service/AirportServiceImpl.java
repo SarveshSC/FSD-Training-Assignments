@@ -30,8 +30,8 @@ public class AirportServiceImpl implements IAirportService {
 	}
 
 	@Override
-	public Airport selectAirportByCode(String airportCode) {
-		return dao.selectAirportByCode(airportCode);
+	public List<Airport> selectAirportByLocation(String location) {
+		return dao.selectAirportByLocation(location);
 	}
 
 	@Override

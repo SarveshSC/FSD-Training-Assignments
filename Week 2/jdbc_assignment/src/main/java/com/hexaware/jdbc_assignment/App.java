@@ -27,14 +27,16 @@ public class App {
 		while (flag) {
 			System.out.println("***WELCOME***"); 
 			System.out.println("Airport Management System");
-			System.out.println("1. Insert");
-			System.out.println("2. Update");
-			System.out.println("3. Delete");
-			System.out.println("4. Select by Airport Code");
+			System.out.println("1. Add Airport");
+			System.out.println("2. Update Airport");
+			System.out.println("3. Delete Airport");
+			System.out.println("4. Show airport by location");
 			System.out.println("5. Show all airports");
 			System.out.println("6. EXIT");
 
 			int choice = scanner.nextInt();
+			
+			
 			
 			switch (choice) {
 			case 1:
@@ -68,17 +70,23 @@ public class App {
 				else {
 					throw new AirportNotFoundException();
 				}
+				break;
 				
 			case 4:
 				System.out.println("Enter airport code");
+				scanner.nextLine();
 				String code = scanner.nextLine();
-				airport = service.selectAirportByCode(code);
-				if(airport != null){
-					System.out.println(airport);
+				System.out.println(code);
+				List<Airport> airports = service.selectAirportByLocation(code);
+				if(airports != null){
+					for(Airport air : airports) {
+						System.out.println(air);
+					}
 				}
 				else {
 					throw new AirportNotFoundException();
 				}
+				break;
 				
 			case 5:
 				System.out.println("Here is the list of all airports");
