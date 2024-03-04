@@ -1,0 +1,9 @@
+<p>find-product works!</p>
+
+<form #formData="ngForm" (ngSubmit)="findProduct(formData.value)">
+    Enter Product name : <input type="text" name="name" ngModel>
+
+    <button type="submit">Find Product</button>
+</form>
+
+{{productList | json}}

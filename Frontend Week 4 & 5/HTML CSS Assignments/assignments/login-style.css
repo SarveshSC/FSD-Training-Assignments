@@ -1,0 +1,53 @@
+#input {
+  width: 90%;
+  border: none;
+  border: solid 1px #ccc;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.header {
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: violet;
+}
+button {
+  display: flex;
+  margin: auto;
+  padding: 10px 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: violet;
+  border: none;
+  border-radius: 20px;
+  width: 200px;
+  justify-content: center;
+
+}
+
+.login-form {
+  width: 20vw;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.forgot-password {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}

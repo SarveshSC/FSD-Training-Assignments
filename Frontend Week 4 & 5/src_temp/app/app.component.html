@@ -1,0 +1,7 @@
+Welcome : {{ username }}
+
+<form>
+  Username : <input type="text" name="username" [value]="username" /> <br />
+  Username from two-way binding :
+  <input type="text" name="username" [(ngModel)]="username" />
+</form>

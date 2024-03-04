@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="registration-style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="registration-form">
+        <label for="form" class="form-header"><h1>Registration Form</h1></label>
+        <form>
+          <div>
+            <label for="name">Full Name</label> <br>
+            <input type="text" id="name" placeholder="Enter Full Name"/>
+          </div>
+          <br>
+          <div>
+            <label for="email">Email Address</label> <br>
+            <input type="email" id="email" placeholder="Enter email address" />
+          </div>
+          <br>
+          <div class="row-div">
+            <div>
+              <label for="contact">Mobile Number</label> <br>
+              <input type="text" id="contact" class="input-row" placeholder="Enter mobile number" />
+            </div>
+            <div style="margin-left: 10px;">
+              <label for="dob">Birth Date</label> <br>
+              <input type="date" style="width: 200px;" id="date" class="input-row" placeholder="mm-day-year"/>
+            </div>
+          </div>
+          <br>
+          <div>
+            <label for="gender">Gender</label> <br>
+            
+            <input type="radio" name="gender" id="radio">
+            <label for="male">Male</label>
+            
+            <input type="radio" name="gender" id="radio">
+            <label for="female">Female</label>
+
+            <input type="radio" name="gender" id="radio">
+            <label for="others">Prefer not to say</label>
+          </div>
+          <div style="margin-top: 10px;">
+            <label for="address" >Address</label> <br>
+            <input type="text" name="address" placeholder="Enter address"/> <br>
+            <div style="margin: 10px 0px;">
+                <select name="country" id="country">
+                    <option value="" selected hidden disabled>Country</option>
+                    <option value="India">India</option>
+                    <option value="Others">Others</option>
+                </select>
+                <input type="text" class="input-row" placeholder="Enter postal code">
+            </div>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

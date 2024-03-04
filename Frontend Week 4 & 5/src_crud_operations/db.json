@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": "101",
+      "name": "Cards",
+      "price": 1000
+    },
+    {
+      "id": "102",
+      "name": "Camera",
+      "price": 12000
+    },
+    {
+      "id": "103",
+      "name": "Laptop",
+      "price": 49000
+    },
+    {
+      "id": "104",
+      "name": "Pen",
+      "price": 80
+    },
+    {
+      "id": "105",
+      "name": "Cards",
+      "price": 500
+    },
+    {
+      "id": "106",
+      "name": "Stationary",
+      "price": 1000
+    },
+    {
+      "id": "107",
+      "name": "Sticks",
+      "price": 1000
+    },
+    {
+      "id": 108,
+      "name": "Toys",
+      "price": 5000
+    }
+  ]
+}

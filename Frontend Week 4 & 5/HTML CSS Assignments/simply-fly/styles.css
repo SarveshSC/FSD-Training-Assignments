@@ -1,0 +1,24 @@
+img{
+    width: 15%;
+    object-fit: cover; 
+    object-position: 100% 0;
+}
+
+.navbar{
+    padding-bottom: 20px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+button.form-group{
+    padding: 10px;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

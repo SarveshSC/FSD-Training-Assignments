@@ -1,0 +1,28 @@
+<p>product works!</p>
+<h1>Product Component</h1>
+
+<h1>List of all products</h1>
+<button type="button" (click)="getAllProducts()">Show all products</button>
+<!-- {{productList | json}} -->
+
+<div class="container">
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Price</th>
+                <th scope="col">Name</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let product of productList">
+            <th scope="row">{{product.id}}</th>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>
+                <button type="button" class="btn btn-danger" (click)="deleteById(product.id)">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>

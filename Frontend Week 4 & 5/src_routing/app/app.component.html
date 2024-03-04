@@ -1,0 +1,7 @@
+<div class="container">
+    <h1>Router Components</h1>
+    <button routerLink="/home">Home</button> <br>
+    <a routerLink="/about" [queryParams]='addressJson'>About us</a> <br>
+    <a routerLink="/contact/{{username}}" >Contact us</a> <br>
+</div>
+<router-outlet></router-outlet>

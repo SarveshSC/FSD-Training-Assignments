@@ -1,0 +1,24 @@
+<div  class="alert alert-success">Login Form</div>
+
+<!-- 
+<button type="button" class="btn btn-primary">Login</button> -->
+
+
+<form   #loginForm="ngForm"   (ngSubmit)="getFormData(loginForm.value)"    class="container  col-md-4">
+
+ <div>
+   <label for="username">Enter UserName: </label> 
+   <input type="text" name="username" required class="form-control" ngModel  #uid="ngModel" />
+   <span  style="color:red"  *ngIf="uid.touched && uid.invalid">UserName is Required</span>
+</div>
+<div>
+  <label for="password">Enter Password: </label> 
+  <input type="text" name="password"  required class="form-control"  ngModel  #pwd="ngModel"/>
+  <span  style="color:red"  *ngIf="pwd.touched && pwd.invalid">Password is Required</span>
+</div>
+
+     <button type="submit"  class="btn btn-success" [disabled]="loginForm.invalid" >Login</button>
+
+
+
+</form>

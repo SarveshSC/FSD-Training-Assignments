@@ -1,0 +1,30 @@
+<div class="header">
+    <h1>Player Management System</h1>
+</div>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Player Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Jersey Number</th>
+      <th scope="col">Total Matches</th>
+      <th scope="col">Role</th>
+      <th scope="col">Team Name</th>
+      <th scope="col">State</th>
+      <th scope="col">Modify</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let player of playerList; index as i">
+      <td>{{player.playerId}}</td>
+      <td>{{player.playerName}}</td>
+      <td>{{player.jerseyNumber}}</td>
+      <td>{{player.totalMatches}}</td>
+      <td>{{player.role}}</td>
+      <td>{{player.teamName}}</td>
+      <td>{{player.state}}</td>
+      <td><button type="button" routerLink="/update-form" (click)="setSelected(player.playerId)">Modify</button></td>
+    </tr>
+</tbody>
+</table>

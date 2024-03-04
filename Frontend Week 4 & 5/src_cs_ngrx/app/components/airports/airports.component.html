@@ -1,0 +1,38 @@
+<p>airports works!</p>
+
+<form   #loginForm="ngForm"   (ngSubmit)="addAirport(loginForm.value)"    class="container  col-md-4">
+    <div>
+      <label for="username">Enter Airport IATACode : </label> 
+      <input type="text" name="iataCode" required class="form-control" ngModel  #uid="ngModel" />
+   </div>
+   <div>
+     <label for="password">Enter Airport name : </label> 
+     <input type="text" name="name"  required class="form-control"  ngModel  #pwd="ngModel"/>
+   </div>
+   <div>
+    <label for="password">Enter Airport location : </label> 
+    <input type="text" name="location"  required class="form-control"  ngModel  #pwd="ngModel"/>
+  </div>
+   <button type="submit"  class="btn btn-success" [disabled]="loginForm.invalid" >Add</button>
+
+</form>
+
+<!-- {{airportList | json}} -->
+
+<div class="container">
+    <table class="table">
+    <thead class="thead-dark">
+        <th>IATACode</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Remove</th>
+    </thead>
+    <tr *ngFor="let airport of airportList">
+        <td>{{airport.iataCode}}</td>
+        <td>{{airport.name}}</td>
+        <td>{{airport.location}}</td>
+        <td><button type="button" class="btn btn-danger" (click)="removeAirport(airport.iataCode)">Remove</button></td>
+    </tr>
+    
+    </table>
+    </div>

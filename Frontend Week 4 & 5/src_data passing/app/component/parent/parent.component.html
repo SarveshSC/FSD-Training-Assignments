@@ -1,0 +1,7 @@
+<p>parent works!</p>
+<h1>Welcome to parent component</h1>
+
+
+<app-child  [myInput]="parentData" (myEventEmitter)="getChildData($event)"></app-child>
+
+<h2>Data from child : {{childData}}</h2>
